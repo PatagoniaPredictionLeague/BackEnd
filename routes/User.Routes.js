@@ -9,8 +9,8 @@ router.post('/login',loginUser );
 router.get('/user',getUser);  
 router.post('/user',createUser); 
 router.put('/user/:id',verifyToken,updateUser);
-router.delete('/user/:id',deleteUser); 
-router.get('/user/:id',verifyToken,getUserById); 
+router.delete('/user/:id',verifyToken,deleteUser); 
+router.get('/user/:id',getUserById); 
 router.get('/user/tablas/:id',getUserByCompeticionId) // NO DOCUMENTADA
 
 export default router;
