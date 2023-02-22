@@ -5,8 +5,8 @@ export const createUserTabla = async (req, res) => {
 
   try {
     const newUserTabla = await UserTabla.create({
-      userId: userId,
-      tablaId: tablaId,
+      UserId: userId,
+      TablaId: tablaId,
       puntos: 0,
       resultados: 0,
       ganador: 0,
