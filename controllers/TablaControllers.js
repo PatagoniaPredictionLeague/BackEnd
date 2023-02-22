@@ -48,4 +48,3 @@ export const deleteTabla = async(req,res)=>{
          
      }
 };
- 

@@ -8,7 +8,7 @@ router.post('/partido',createPartido);
 router.put('/partido/:id',updatePartido); 
 router.put('/partidoFinal/:id',updatePartidoFinal); 
 router.put('/partidoEnCurso/:id',updatePartidoEnCurso); 
-router.get('/partido/:id',getPartidoById);
+router.get('/partido/id/:id',getPartidoById); 
 router.get('/partidoFecha',getPartidoByFecha);
 
 export default router;
