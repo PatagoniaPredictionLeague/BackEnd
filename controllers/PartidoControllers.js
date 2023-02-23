@@ -22,14 +22,14 @@ export const getPartido = async (req, res) => {
 };
 
 export const createPartido = async (req, res) => {
-  const { local, visitante, fechaHora, competicionId, fechaId } = req.body;
+  const {id, local, visitante, fechaHora, fechaId } = req.body;
 
   try {
     const newPartido = await Partido.create({
+      id:id,
       local: local,
       visitante: visitante,
       fechaHora: fechaHora,
-      competicionId: competicionId,
       enCurso: 0,
       fechaId: fechaId,
     });

@@ -3,6 +3,8 @@ import sequelize from './database/db.js';
 import { Server  } from 'socket.io';
 import http from 'http';
 import { PORT } from './config.js';
+import {matches} from './dateRecolect.js';
+
 
 import  './database/models/User.js';
 import  './database/models/Competicion.js';
@@ -11,6 +13,8 @@ import  './database/models/Prediccion.js';
 import './database/models/Tabla.js';
 import  './database/models/UserTabla.js';
 import  './database/models/Fecha.js';
+import { log } from 'console';
+
 
 
 //Setting
@@ -34,12 +38,15 @@ io.on('connection', (socket) => {
   });
 });
 
-httpServer.listen(port, function () {
+httpServer.listen(port, async function () {
   sequelize.sync({alter:true}).then( () => {
     console.log("Nos hemos conectado a la base de datos");
   }).catch(error =>{
     console.log("Se ha producido un error", error);
   })
   console.log(`Servidor corriendo en http://localhost:${port}`);
+  
 });
+
+
 

@@ -20,11 +20,11 @@ export const getCompeticion = async (req,res) =>{
 
 export const createCompeticion = async (req,res) =>{
 
-    const {name}  = req.body;
+    const {id,name}  = req.body;
 
     try{
         
-        const newCompeticion = await Competicion.create({name:name});
+        const newCompeticion = await Competicion.create({ id:id,name:name});
 
         res.json(newCompeticion);
 

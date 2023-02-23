@@ -16,10 +16,11 @@ export const getFechas = async (req, res) => {
 };
 
 export const createFecha = async (req, res) => {
-  const { name, competicionId } = req.body;
+  const { id,name, competicionId } = req.body;
 
   try {
     const newFecha = await Fecha.create({
+      id:id,
       name: name,
       competicionId: competicionId,
     });

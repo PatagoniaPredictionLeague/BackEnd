@@ -38,8 +38,6 @@ Partido.init({
     enCurso : {
         type : DataTypes.INTEGER,
     }
-   
-  
     
 },{
     sequelize,
